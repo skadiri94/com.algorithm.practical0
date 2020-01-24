@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class TestMyMath {
 
     public static void main(String[] args) {
@@ -34,14 +32,29 @@ public class TestMyMath {
         System.out.println(String.format("%.0f",sumofN));//expect 1
 
 
-        double mOfN = MyMath.calNNum(3);
-        System.out.println(String.format("%.0f",mOfN));//expect 18
+        double mOfN = MyMath.numFactorial(3);
+        System.out.println(String.format("%.0f",mOfN));//expect 6
 
-        mOfN = MyMath.calNNum(2);
+        mOfN = MyMath.numFactorial(2);
         System.out.println(String.format("%.0f",mOfN));//expect 4
 
-        mOfN = MyMath.calNNum(4);
+        mOfN = MyMath.numFactorial(4);
         System.out.println(String.format("%.0f",mOfN));//expect 24
+
+        boolean isprime = MyMath.isPrime(5) ? true : false;
+
+        System.out.println(isprime + " 5 is a Prime Number");//True
+
+        isprime = MyMath.isPrime(11) ? true : false;
+
+        System.out.println(isprime + " 11 is a Prime Number");//True
+
+        isprime = MyMath.isPrime(9) ? true : false;
+
+        System.out.println(isprime + " 9 is a Prime Number");//false
+
+
+
 
 
         //JOptionPane.showMessageDialog(null,pwr,"Test",JOptionPane.INFORMATION_MESSAGE);

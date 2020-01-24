@@ -1,6 +1,6 @@
 public class MyMath {
 
-    //this Method takes in 3 intergers value and return the smallest among the integers
+    //this Method takes in 3 parameters which are integers value and return the smallest among the integers
 
     public static double smallestNum(int a, int b, int c) {
         double smallestNum = a;
@@ -13,6 +13,8 @@ public class MyMath {
         return smallestNum;
     }
 
+    //This method find the power of an integer by taking in two int number a and b as parameters and returning a double
+
     public static double powOfNum(int a, int b) {
 
 
@@ -24,6 +26,7 @@ public class MyMath {
 
     }
 
+//The method takes a single parameter of type int and  and finds the sum of 1 to n, n=a and returns a double.
 
     public static double sumOfNum(int a){
 
@@ -38,24 +41,43 @@ public class MyMath {
 
     }
 
-    public static double calNNum(int a){
+    //This takes in a int value and calculates for its factorial and returns a double.
 
-        double result=a;
-        double nextN=2;
-        for(int i = 0;i<a-1;i++) {
+    public static double numFactorial(int a){
 
-            result *= nextN;
-            nextN++;
+            double result = a;
+        for(int i = 2 ;i< a;i++) {
+
+            result *= i;
+
         }
         return result;
 
     }
 
-    public static boolean isPrime(){
+    //This method takes in a single parameter and loops through its factorial to check if its a prime number or not
+    //
+    // and returns a boolean result
 
-        boolean result = false;
+    public static boolean isPrime(int a){
 
+        boolean valid = true;
 
-        return result;
+        for(int i = 2; i < a; i ++){
+
+            while(valid){
+
+                if(a % i == 0) {
+                    System.out.println(" i is " + i);
+                    valid = false;
+
+                }
+                else
+                    break;
+
+            }
+        }
+
+        return valid;
     }
 }
