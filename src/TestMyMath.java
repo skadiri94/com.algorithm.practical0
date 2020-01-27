@@ -1,3 +1,7 @@
+import javax.swing.*;
+import java.lang.reflect.Array;
+
+
 public class TestMyMath {
 
     public static void main(String[] args) {
@@ -49,11 +53,33 @@ public class TestMyMath {
 
         System.out.println(isprime + " 11 is a Prime Number");//True
 
+        isprime = MyMath.isPrime(49) ? true : false;
+
+        System.out.println(isprime + " 49 is a Prime Number");//false
+
         isprime = MyMath.isPrime(9) ? true : false;
 
         System.out.println(isprime + " 9 is a Prime Number");//false
 
 
+        // This takes in  a list of numbers between 1 and 100. A number less than 1 indicates end of input.
+        // and Count how many of each number was entered.
+        int listOfNum[] = new int[10];
+        int numCount, numEntered;
+
+        numEntered = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter Number"));
+        while(numEntered >= 1){
+
+            for(int i = 0; i <= listOfNum.length; i ++){
+
+                listOfNum[i] = numEntered;
+
+            }
+
+        }
+        for(int i = 0; i <= listOfNum.length; i ++){
+
+        }
 
 
 
