@@ -64,20 +64,28 @@ public class TestMyMath {
 
         // This takes in  a list of numbers between 1 and 100. A number less than 1 indicates end of input.
         // and Count how many of each number was entered.
-        int listOfNum[] = new int[10];
-        int numCount, numEntered;
+        int numCount[] = new int[101];
+        int  index;
 
-        numEntered = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter Number"));
-        while(numEntered >= 1){
+        index = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter Number"));
+        while(index >= 1) {
 
-            for(int i = 0; i <= listOfNum.length; i ++){
 
-                listOfNum[i] = numEntered;
 
-            }
+
+                //increase the count of the number entered
+                numCount[index] ++;
+
+                index = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter Number"));
+
 
         }
-        for(int i = 0; i <= listOfNum.length; i ++){
+
+        //This prints out the result
+        for(int i = 1; i < numCount.length; i ++){
+
+            //if(numCount[i] != 0)
+            System.out.println(i  + "   Was Entered " + numCount[i]);
 
         }
 
