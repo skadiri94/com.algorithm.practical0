@@ -90,9 +90,34 @@ public class TestMyMath {
         }
 
 
+        //Test for the countWords() which counts the amount of words in a sentence.
+
+        String sentence  = "A start is  Born";
+
+        int numOfWord = MyMath.countWords(sentence);//Number of words = 4
+
+        System.out.println("The Amount of Words in the Sentence is " + numOfWord);
+
+        String password;
+        password = JOptionPane.showInputDialog("Enter Password");
+
+        boolean validPassword = false;
+        while(!validPassword){
+
+            validPassword = MyMath.isValid(password);
+
+            password = JOptionPane.showInputDialog("Password must be at least 8 characters long and Must contain " +
+                    " at least one Upper and Lower Case and at least a Digit Enter again");
+
+        }
+
+        System.out.println("Password Valid");
+
 
         //JOptionPane.showMessageDialog(null,pwr,"Test",JOptionPane.INFORMATION_MESSAGE);
 
         //System.out.println(String.format("%.0f",pwr));
     }
+
+
 }

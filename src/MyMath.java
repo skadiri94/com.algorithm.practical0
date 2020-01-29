@@ -1,3 +1,5 @@
+import static java.lang.Character.*;
+
 public class MyMath {
 
     //this Method takes in 3 parameters which are integers value and return the smallest among the integers
@@ -79,5 +81,54 @@ public class MyMath {
         }
 
         return valid;
+    }
+
+    public static int countWords(String str){
+        int count = 0;
+
+        for(int i = 0; i < str.length(); i ++){
+
+
+            if(i != 0 && str.charAt(i) == ' ' && str.charAt(i+1) != ' ')
+                count++;
+        }
+
+        return count+1;
+    }
+
+    /**
+     * Its a boolean method that takes in a password parameter and validates it to see if its meets requirements
+     * It must be at least 8 characters long
+     * must contain and Uppercase Letter
+     * must contain at least one digit
+     * @param password the parameter that is being validated
+     * @return a boolean data type.
+     */
+    public static boolean isValid(String password){
+
+        boolean valid = false;
+
+            int upperCase = 0, lowerCase = 0, digits = 0;
+
+                if(password.length()>=8){
+
+                    for(int i = 0; i < password.length()-1; i ++){
+
+                    if(isUpperCase(password.charAt(i)))
+                         upperCase++;
+                    if(isLowerCase(password.charAt(i)))
+                        lowerCase++;
+                    if(isDigit(password.charAt(i)))
+                        digits++;
+
+                    }
+
+                    if(upperCase != 0 && lowerCase != 0 && digits != 0)
+                        valid = true;
+
+            }
+
+
+       return valid;
     }
 }
