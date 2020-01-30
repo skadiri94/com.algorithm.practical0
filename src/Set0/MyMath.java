@@ -65,22 +65,18 @@ public class MyMath {
 
     public static boolean isPrime(int a){
 
-        boolean valid = true;
+        boolean valid = false;
 
-        for(int i = 2; i < a; i ++){
+      int i = 2;
 
-            while(valid){
+            while(i<Math.sqrt(a)){
 
-                if(a % i == 0) {
-                    System.out.println(" i is " + i);
-                    valid = false;
+                if(a % i == 0)
+                    valid = true;
 
-                }
-                else
-                    break;
-
+              i++;
             }
-        }
+
 
         return valid;
     }
