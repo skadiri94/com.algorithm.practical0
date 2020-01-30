@@ -1,3 +1,5 @@
+package Set0;
+
 import static java.lang.Character.*;
 
 public class MyMath {
