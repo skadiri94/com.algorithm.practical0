@@ -6,19 +6,19 @@ public class TestEncrypter {
         String originalText="I am not a hum";
         String cipherText;
 
-        cipherText = Encrypter.encrypt(originalText,3);
+        cipherText = Encrypter.encryptRowColTranspose(originalText,3);
 
         System.out.println("Test Transposed is " + cipherText );//INAMAOHXMTUX
 
         originalText="I am not a human";
 
-        cipherText = Encrypter.encrypt(originalText,3);
+        cipherText = Encrypter.encryptRowColTranspose(originalText,3);
 
         System.out.println("Test Transposed is " + cipherText );//INAMAOHAMTUN
 
         originalText = "INAMAOHAMTUN";
 
-        String decipherText = Encrypter.decrypt(originalText,3);
+        String decipherText = Encrypter.decryptRowColTranspose(originalText,3);
 
         System.out.println("decrypted Text " + decipherText );//IAMNOTAHUMAN
     }

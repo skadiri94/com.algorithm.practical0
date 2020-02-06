@@ -9,10 +9,10 @@ public class Encrypter {
      * @param numColumns the number of column the plaintext will be transposed.
      * @return the encrypted text returned
      */
-    public static String encrypt(String plaintext, int numColumns){
+    public static String encryptRowColTranspose(String plaintext, int numColumns){
 
         String encryptedText="", newText="";
-        int txtCount=0,spaceLeft =0, numRow = 0;
+        int txtCount=0,spaceLeft, numRow;
         //plaintext.replaceAll(" ", ""); ;
 
         //Removing White Space from plainText
@@ -50,13 +50,13 @@ public class Encrypter {
 return encryptedText;
     }
 
-    public static String decrypt(String ciphertext, int numColumns){
-        String decrypt ="";
+    public static String decryptRowColTranspose(String ciphertext, int numColumns){
+        String decrypt;
         int numRow = ciphertext.length()/numColumns;
 
 
 
-        decrypt = encrypt(ciphertext,numRow);
+        decrypt = encryptRowColTranspose(ciphertext,numRow);
 
         return decrypt;
     }
