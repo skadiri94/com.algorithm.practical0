@@ -60,4 +60,39 @@ return encryptedText;
 
         return decrypt;
     }
+
+    public static String encryptSimpleSubstitution(String plaintext, String mapping){
+        String enryptedText = "", newText ="";
+
+
+        for(int i = 0; i < plaintext.length(); i ++){
+
+
+            if(plaintext.charAt(i) != ' ')
+                newText += plaintext.charAt(i);
+            }
+
+        for(int i = 0; i < newText.length(); i ++){
+
+
+
+            char c = newText.charAt(i);
+            int value =  c - 65;
+
+
+            enryptedText += mapping.charAt(value);
+
+        }
+        return enryptedText;
+    }
+
+    public static String decryptSimpleSubstitution(String plaintext, String mapping) {
+
+        String newText = "", decrytedTxt ="";
+
+        for (int i = 0; i < newText.length(); i++) {
+        }
+
+        return decrytedTxt;
+    }
 }

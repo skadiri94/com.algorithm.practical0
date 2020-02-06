@@ -21,5 +21,11 @@ public class TestEncrypter {
         String decipherText = Encrypter.decryptRowColTranspose(originalText,3);
 
         System.out.println("decrypted Text " + decipherText );//IAMNOTAHUMAN
+
+        String mapping = "RAHJMYUWKXNFQGEBOPZSDCTVLI";
+        String txt = "I AM ME";
+        String msg = Encrypter.encryptSimpleSubstitution(txt,mapping);
+
+        System.out.println("Encrypted Text " + msg );//KRQQM
     }
 }
