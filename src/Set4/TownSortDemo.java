@@ -1,5 +1,6 @@
 package Set4;
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -20,6 +21,19 @@ public class TownSortDemo {
         Arrays.sort(towns);
         System.out.println("\nSorted List");
         displayArray(towns);
+        String searchName = JOptionPane.showInputDialog("Please Enter Town: ");
+        Town  searchTown  = new Town(searchName,null,0);
+
+        int result = Arrays.binarySearch(towns, searchTown);
+        System.out.println(result);//4
+
+        if(result<0)
+            System.out.println(searchTown + "not found");
+        else{
+            String county = towns[result].getCounty();
+            System.out.println("for " + searchName + "\nCounty :" + county);
+        }
+
 
         ArrayList<Town> towns1 = new ArrayList<Town>();
 

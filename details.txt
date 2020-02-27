@@ -1,0 +1,5 @@
+maggie  4521
+sue     3422
+bart    1490
+tim     7891
+kay     2126
