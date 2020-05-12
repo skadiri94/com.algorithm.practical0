@@ -95,4 +95,45 @@ return encryptedText;
 
         return decrytedTxt;
     }
+
+    public static String encryptColTranspose(String plaintext, int numColumns){
+
+        String encryptedText="", newText="";
+        int txtCount=0,spaceLeft, numRow;
+        //plaintext.replaceAll(" ", ""); ;
+
+        //Removing White Space from plainText
+
+        for(int i = 0;i< plaintext.length(); i++){
+
+            if(plaintext.charAt(i) != ' ') {
+                newText += plaintext.charAt(i);
+                txtCount++;
+            }
+
+        }
+
+        if(txtCount % numColumns != 0) {
+            spaceLeft = numColumns - (txtCount % numColumns);
+
+
+            for (int i = 0; i < spaceLeft; i++) {
+
+                newText +="x";
+            }
+        }
+
+
+        numRow = newText.length()/numColumns;
+        for(int col = 0; col < numColumns; col++){
+            int index = col;
+            for(int row = 0; row < numRow; row ++){
+                encryptedText += newText.charAt(index);
+                index += numColumns;
+            }
+
+        }
+
+        return encryptedText;
+    }
 }

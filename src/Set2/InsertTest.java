@@ -29,7 +29,7 @@ public class InsertTest {
         cS = PArray.remove(ppl, cS, pos);
         for (int i = 0; i < cS; i++) {
 
-            System.out.println(ppl[i]);//13476
+            System.out.println(ppl[i]);//1347
         }
 
         System.out.println("Current Size is "+cS);//5
